@@ -28,6 +28,9 @@ data:
       hosts: ['${ELASTICSEARCH_HOST:elasticsearch}:${ELASTICSEARCH_PORT:9200}']
       username: ${ELASTICSEARCH_USERNAME}
       password: ${ELASTICSEARCH_PASSWORD}
+      worker: 4
+      compression_level: 1
+      bulk_max_size: 1000
 ---
 apiVersion: v1
 kind: ConfigMap
